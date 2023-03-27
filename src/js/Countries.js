@@ -6,7 +6,7 @@ export function fetchCountries(name) {
   return fetch(url)
   .then((response) => {
   if (!response.ok) {
-  Notiflix.Notify.warning('"Oops, there is no country with that name"',);
+  throw Notiflix.Notify.warning('"Oops, there is no country with that name"',);
   }
   return response.json();
   });
